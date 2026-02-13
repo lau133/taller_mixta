@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Sala Computación</title>
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+    vr-mode-ui="enabled: false"
+  >
+
+  <a-marker preset="hiro">
+
+      <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="directional" position="0 1 1" intensity="0.8"></a-light>
+
+      <a-entity
+        gltf-model="url(models/fnaf_1_freddys_mic.glb)"
+        scale="0.05 0.05 0.05"
+        position="0.8 0.2 0"
+      rotation="-90 0 0"
+      ></a-entity>
+ 
+<a-entity
+
+  gltf-model="url(models/pacho2TEX.glb)"
+  scale="0.2 0.2 0.2"
+  position="0.3 0 0"
+  rotation="270 0 0"
+></a-entity>
+
+
+      <a-plane
+        position="0 1 0"
+        rotation="-90 0 0"
+        width="2.8"
+        height="1.6"
+        color="black"
+        opacity="0.6"
+      ></a-plane>
+
+<a-text
+  id="estadoSala1"
+  value="Estado: DISPONIBLE"
+  position="0 1.5 0.5"
+  rotation="-90 0 0"
+  align="center"
+  color="green"
+  width="2"
+></a-text>
+
+
+      <a-text
+        value="BIENVENIDO A LA SALA 5.1\n\n• No comida\n• Usar audifonos\n• Devolver los equipos y apagarlos\n• Cerrar la puerta para no molestar a las demás salas"
+        position="0 1 0.01"
+        rotation="-90 0 0"
+        align="center"
+        color="white"
+        width="2.5"
+      ></a-text>
+
+      
+
+    </a-marker>
+
+
+    <a-marker preset="kanji">
+
+ <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="directional" position="0 1 1" intensity="0.8"></a-light>
+
+
+      
+    <a-entity
+      gltf-model="url(models/pacho2TEX.glb)"
+     scale="0.2 0.2 0.2"
+  position="1.4 0 0"
+  rotation="270 0 0"
+    ></a-entity>
+
+    <a-entity
+        gltf-model="url(models/cellphone.glb)"
+        scale="0.08 0.08 0.08"
+        position="1.8 0.2 0"
+      rotation="180 0 0"
+      ></a-entity>
+
+    <a-plane
+        position="0 1 0"
+        rotation="-90 0 0"
+        width="2.8"
+        height="1.6"
+        color="black"
+        opacity="0.6"
+      ></a-plane>
+
+    <a-text
+     value="BIENVENIDO AL AUDITORIO SAN FRANCISCO DE ASIS\n\n• No comida\n• Por favor sentarse adelante\n• Guardar silencio\n•ADENTRO NO HAY SERVICIO DE CELULAR, ASI QUE PRESTA ATENCION A LA INFORMACION"
+        position="0 1 0.01"
+        rotation="-90 0 0"
+        align="center"
+        color="white"
+        width="2.5"
+    ></a-text>
+
+    <a-text
+  id="estadoSala1"
+  value="Proxima apertura: 13/02/2026 10:00 AM"
+  position="0 1.5 0.8"
+  rotation="-90 0 0"
+  align="center"
+  color="yellow"
+  width="2"
+></a-text>
+
+  </a-marker>
+
+
+<a-marker type="pattern" url="assets/pattern-ultimo.patt">
+    
+ <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="directional" position="0 1 1" intensity="0.8"></a-light>
+      
+    <a-entity
+      gltf-model="url(models/pacho2TEX.glb)"
+     scale="0.2 0.2 0.2"
+  position="1.4 0 0"
+  rotation="270 0 0"
+    ></a-entity>
+
+    <a-entity
+        gltf-model="url(models/drill.glb)"
+        scale="0.06 0.06 0.06"
+        position="-1.8 0.2 0"
+      rotation="90 180 0"
+      ></a-entity>
+
+    <a-plane
+        position="0 1 0"
+        rotation="-90 0 0"
+        width="2.8"
+        height="1.6"
+        color="black"
+        opacity="0.6"
+      ></a-plane>
+
+    <a-text
+     value="BIENVENIDO AL HANGAR\n\n• No comida\n• Por favor utilizar el equipo de proteccion en todo momento\n• Apagar las maquinas luego de su uso\n•Si requiere hacer uso de las impresoras 3D, por favor llene el permiso con antelacion."
+        position="0 1 0.01"
+        rotation="-90 0 0"
+        align="center"
+        color="white"
+        width="2.5"
+    ></a-text>
+
+    <a-text
+  id="estadoSala1"
+  value="Horarios: Lunes a Viernes de 7:00 am a 6:00 pm"
+  position="0 1.5 0.8"
+  rotation="-90 0 0"
+  align="center"
+  color="yellow"
+  width="2"
+></a-text>
+
+  </a-marker>
+
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
